@@ -1,0 +1,4 @@
+title=GMU
+description=GMU Music Player
+exec=/home/retrofw/apps/gmu-retrofw/gmu.dge
+clock=600
