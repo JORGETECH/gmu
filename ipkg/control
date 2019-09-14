@@ -1,0 +1,10 @@
+Package: gmu-retrofw
+Version:20190914
+Description: GMU Music Player
+Section: apps
+Priority: optional
+Maintainer: jorgetech
+Architecture: mipsel
+Homepage: https://github.com/JORGETECH/gmu
+Depends:
+Source: https://github.com/JORGETECH/gmu
