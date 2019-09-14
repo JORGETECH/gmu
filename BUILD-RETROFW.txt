@@ -1,0 +1,21 @@
+Instructions for building GMU for RetroFW
+-----------------------------------------
+
+-Compile the app:
+
+make distbin
+
+-Give execute permission to the packaging script:
+
+chmod +x package.sh
+
+-Run the packaging script:
+
+./package.sh
+
+-The IPK file will appear at the root of the source code folder with the name "gmu-retrofw.ipk"
+
+-(Optional) Clean up after compiling:
+
+make clean
+rm -rf gmu-0.10.1-dingux/
