@@ -4,7 +4,7 @@
 mkdir -p ipkg/home/retrofw/apps/gmu-retrofw
 
 # Copy the files to the correct location for packaging
-cp gmu-0.10.1-dingux/* ipkg/home/retrofw/apps/gmu-retrofw/
+cp -r gmu-0.10.1-dingux/* ipkg/home/retrofw/apps/gmu-retrofw/
 
 cd ipkg
 
