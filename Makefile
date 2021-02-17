@@ -150,13 +150,13 @@ default_distbin: $(DISTFILES)
 	$(Q)-rm -rf $(projname)-$(TARGET).zip
 	$(Q)mkdir $(projname)-$(TARGET)
 	$(Q)cp -rl --parents $(DISTFILES) $(projname)-$(TARGET)
-	$(Q)-cp gmuc $(projname)-$(TARGET)
+#	$(Q)-cp gmuc $(projname)-$(TARGET)
 	$(Q)-cp gmu.$(TARGET).conf $(projname)-$(TARGET)/gmu.$(TARGET).conf
 	$(Q)-cp $(TARGET).keymap $(projname)-$(TARGET)/$(TARGET).keymap
 	$(Q)-cp gmuinput.$(TARGET).conf $(projname)-$(TARGET)/gmuinput.conf
 	$(Q)$(STRIP) $(projname)-$(TARGET)/decoders/*.so
 	$(Q)$(STRIP) $(projname)-$(TARGET)/$(BINARY)
-	$(Q)-$(STRIP) $(projname)-$(TARGET)/gmuc
+#	$(Q)-$(STRIP) $(projname)-$(TARGET)/gmuc
 	$(Q)zip -r $(projname)-$(TARGET).zip $(projname)-$(TARGET)
 	$(Q)-rm -rf $(projname)-$(TARGET)
 
