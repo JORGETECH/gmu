@@ -1,21 +1,22 @@
 Instructions for building GMU for RetroFW
 -----------------------------------------
 
+Note: The "config.mk" Makefile assumes you have installed the toolchain at "/opt/rs97tools", if this is not the case for you such file MUST be adapted or the build will fail.
+
 -Compile the app:
 
 make distbin
 
 -Give execute permission to the packaging script:
 
-chmod +x package.sh
+chmod +x package-opk.sh
 
 -Run the packaging script:
 
-./package.sh
+./package-opk.sh
 
--The IPK file will appear at the root of the source code folder with the name "gmu-retrofw.ipk"
+-The OPK file will appear at the root of the source code folder with the name "gmu-retrofw.opk"
 
 -(Optional) Clean up after compiling:
 
 make clean
-rm -rf gmu-0.10.1-dingux/
