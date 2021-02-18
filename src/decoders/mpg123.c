@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define MPG123_LARGESUFFIX_64
 #include <mpg123.h>
 #include "../gmudecoder.h"
 #include "../trackinfo.h"
@@ -183,7 +184,7 @@ static int mpg123_play_file(const char *mpeg_file)
 				long  file_size = reader_get_file_size(r);
 				int   need_more_debug = 0;
 				
-				if (file_size > 0) mpg123_set_filesize(player, file_size);
+				if (file_size > 0) mpg123_set_filesize_64(player, file_size);
 				if (metaint_str) metaint = atoi(metaint_str); else metaint = -1;
 				if (metaint > 0) {
 					metacount = metaint - size;
@@ -298,7 +299,7 @@ static int get_current_bitrate(void)
 
 static int get_length(void)
 {
-	return mpg123_length(player) / sample_rate;
+	return mpg123_length_64(player) / sample_rate;
 }
 
 static int get_samplerate(void)
