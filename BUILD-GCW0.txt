@@ -1,0 +1,26 @@
+Instructions for building GMU for GCW0/OpenDingux/RG350
+-------------------------------------------------------
+
+Note: The "config.mk" Makefile assumes you have installed the toolchain at "/opt/RG350_buildroot/output/host", if this is not the case for you such file MUST be adapted or the build will fail.
+
+-Copy the appropriate mk file
+
+cp gcw0.mk config.mk
+
+-Compile the app:
+
+make distbin
+
+-Give execute permission to the packaging script:
+
+chmod +x package-opk.sh
+
+-Run the packaging script:
+
+./package-opk.sh
+
+-The OPK file will appear at the root of the source code folder with the name "gmu-retrofw.opk"
+
+-(Optional) Clean up after compiling:
+
+make clean
