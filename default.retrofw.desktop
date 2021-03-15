@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GMU
+Comment=Music player
+Exec=gmu.dge
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=gmu
+Categories=applications;
+Version=0.10.1-RetroFW
+X-OD-Manual=README.txt
+X-OD-Scaling=0
