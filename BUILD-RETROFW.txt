@@ -3,6 +3,10 @@ Instructions for building GMU for RetroFW
 
 Note: The "config.mk" Makefile assumes you have installed the toolchain at "/opt/rs97tools", if this is not the case for you such file MUST be adapted or the build will fail.
 
+-Copy the appropriate mk file
+
+cp retrofw.mk config.mk
+
 -Compile the app:
 
 make distbin
