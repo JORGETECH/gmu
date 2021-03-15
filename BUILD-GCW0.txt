@@ -9,17 +9,7 @@ cp gcw0.mk config.mk
 
 -Compile the app:
 
-make distbin
-
--Give execute permission to the packaging script:
-
-chmod +x package-opk.sh
-
--Run the packaging script:
-
-./package-opk.sh
-
--The OPK file will appear at the root of the source code folder with the name "gmu-retrofw.opk"
+TARGET=gcw0 make distbin
 
 -(Optional) Clean up after compiling:
 
