@@ -1,0 +1,29 @@
+#!/bin/sh
+
+GMU_CFG_PATH="$HOME"/.config/gmu/
+GMU_CFG="$GMU_CFG_PATH"./gmu.conf
+VERSION="$GMU_CFG_PATH"./v0.10
+
+cd `dirname $0`
+
+[ ! -d "$HOME" ] && {
+	echo "Can not find home directory."
+	exit 1
+}
+
+mkdir -p "$GMU_CFG_PATH"
+
+[ ! -f "$GMU_CFG" ] && {
+	cp gmu.gcw0.conf "$GMU_CFG"
+	touch "$VERSION"
+}
+
+[ ! -f "$VERSION" ] && {
+	mv "$GMU_CFG" "$GMU_CFG".bak
+	cp gmu.gcw0.conf "$GMU_CFG"
+	touch "$VERSION"
+}
+
+SDL_NOMOUSE=1 LD_LIBRARY_PATH=libs.gcw0/ ./gmu.bin -c "$GMU_CFG"
+
+exit $?
